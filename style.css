@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f7f3f0; /* Теплый бежевый фон */
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Шапка */
+header {
+    background: linear-gradient(135deg, #f6d5c8 0%, #e8b4a2 100%);
+    text-align: center;
+    padding: 100px 20px;
+    border-bottom: 5px solid #d49a87;
+}
+
+.header-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+header h1 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #4a3f35;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+header p {
+    font-size: 18px;
+    color: #5a4e44;
+    margin-bottom: 35px;
+}
+
+/* Главные кнопки */
+.btn-main, .btn-tg {
+    display: inline-block;
+    background-color: #ffffff;
+    color: #d49a87;
+    text-decoration: none;
+    padding: 15px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.btn-main:hover {
+    background-color: #fdfbf9;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Секции */
+section {
+    padding: 70px 0;
+}
+
+h2 {
+    font-size: 28px;
+    color: #4a3f35;
+    margin-bottom: 40px;
+    text-align: center;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #d49a87;
+    margin: 15px auto 0;
+}
+
+/* Блоки преимуществ и этапов */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.feature-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.04);
+    transition: transform 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-card span {
+    font-size: 40px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.feature-card h3 {
+    color: #d49a87;
+    margin-bottom: 10px;
+}
+
+/* Блок расписания */
+.schedule-grid {
+    display: grid;
+    gap: 20px;
+}
+
+.service {
+    background: white;
+    padding: 25px 30px;
+    border-radius: 15px;
+    border-left: 6px solid #d49a87;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+}
+
+.service-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+}
+
+.service-header h3 {
+    font-size: 22px;
+    color: #4a3f35;
+}
+
+.price {
+    background: #f6d5c8;
+    color: #8c5a47;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.time {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #7a6b61;
+    background: #f7f3f0;
+    padding: 8px 15px;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.note {
+    text-align: center;
+    font-size: 14px;
+    color: #888;
+    margin-top: 20px;
+    font-style: italic;
+}
+
+/* Контакты */
+.contact {
+    text-align: center;
+    background: white;
+    padding: 50px 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    margin-bottom: 50px;
+}
+
+.contact p {
+    margin-bottom: 30px;
+    font-size: 18px;
+}
+
+.btn-tg {
+    background-color: #2AABEE; /* Фирменный цвет Telegram */
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 5px 15px rgba(42, 171, 238, 0.3);
+}
+
+.btn-tg:hover {
+    background-color: #229ED9;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(42, 171, 238, 0.4);
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: #4a3f35;
+    color: #f7f3f0;
+    font-size: 14px;
+}
+
+/* Адаптация под телефоны */
+@media (max-width: 768px) {
+    header h1 { font-size: 26px; }
+    header { padding: 70px 20px; }
+    .service-header { flex-direction: column; align-items: flex-start; gap: 10px; }
+    .service { padding: 20px; }
+}
